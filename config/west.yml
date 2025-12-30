@@ -1,4 +1,8 @@
 manifest:
+  defaults:
+    remote: urob
+    revision: v0.3 # Pin everything to v0.3
+
   remotes:
     - name: urob
       url-base: https://github.com/urob
@@ -8,9 +12,9 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
       import: app/west.yml
-      
+
+    # ZMK modules
     - name: zmk-adaptive-key
       path: modules/zmk/adaptive-key
     - name: zmk-auto-layer
